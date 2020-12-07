@@ -1,151 +1,171 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    background-color: #f9c74f;
-    font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  background-color: #f9c74f;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
-
-
-/************* MUHANNAD'S DEL PÅBÖRJAR ************/
-
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
-
-body {
-    height: 100vh;
-    display: flex;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    font-family: 'Sansita Swashed', cursive;
-}
-
-.control-button{  
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: rgba(128, 128, 128, 0.356);
-}
-
-.control-button button{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5px 15px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    color: white;
-    border: 3px solid cyan;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 7px;
-    font-family: 'Sansita Swashed', cursive;
-}
-
-.info-container{
-    width: 360px;
-    height: 250px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    padding: 20px;
-    font-size: 24px;
-    overflow: hidden;
-    border: 2px solid cyan;
-    line-height: 3rem;
-}
-
-.name, .player-moves, .timer{
-    border: 3px solid cyan;
-    border-radius: 8px;
-    background-color: whitesmoke;
-    margin: 3px 15px;
-    text-align: center;
-    font-style: italic;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-}
-
-.restart{
-    display: flex;
-    justify-content: center;
-    margin-top: 3px;
-}
-
-.reset-all{
-    padding: 5px 15px;
-    border: 3px solid cyan;
-    border-radius: 8px;
-    font-family: 'Sansita Swashed', cursive;
-    font-style: italic;
-    font-weight: bold;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-}
-
-/************* MUHANNAD'S DEL SLUTAR ************/
-
 
 .container {
-    grid-column: 1/-1;
-    height: 41.875rem;
-    width: 61rem; /**** Changed ****/
-    margin: auto;
+  grid-column: 1/-1;
+  height: 41.875rem;
+  width: 59.375rem;
+  margin: 4rem auto;
 }
 
 #game-title {
-    text-align: center;
-    color: white;
+  text-align: center;
 }
 
 .memory-game {
-    display: flex;
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    /* 3d effect */
-    perspective: 62.5rem;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  /* 3d effect */
+  perspective: 62.5rem;
 }
 
 .memory-card {
-    margin: 5px;
-    height: 10rem;
-    width: 9.375rem;
-    position: relative;
-    transition: ease;
-    /* 3d effect */
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
+  margin: 5px;
+  height: 10rem;
+  width: 9.375rem;
+  position: relative;
+  transition: ease;
+  /* 3d effect */
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
 }
 
 .memory-card:active {
-    transform: scale(0.97);
-    transition: transform 0.2s;
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.front-face, .back-face {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background-color: #f94144;
-    /* Göm baksidan */
-    backface-visibility: hidden;
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #f94144;
+  /* Göm baksidan */
+  backface-visibility: hidden;
 }
 
 .front-face {
-    /* flippa 180 för att se front face */
-    transform: rotateY(180deg);
+  /* flippa 180 för att se front face */
+  transform: rotateY(180deg);
 }
+
+/************* MUHANNAD'S DEL PÅBÖRJAR ************/
+
+/* @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap"); */
+
+/* body {
+  height: 100%;
+  display: flex;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  font-family: "Sansita Swashed", cursive;
+} */
+
+.info-container {
+  /*  width: 360px;
+  height: 400px;
+  margin-bottom: 1.1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%); */
+
+  background-color: #f9c74f;
+  /* box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5); */
+  padding: 20px;
+  font-size: 24px;
+  overflow: hidden;
+  /* border: 2px solid cyan; */
+  line-height: 3rem;
+}
+
+.name,
+.player-moves,
+.timer, .player-score {
+  /* border: 3px solid cyan; */
+  /* border: 2px solid #f94144; */
+
+  border-radius: 8px;
+  background: linear-gradient(rgb(147, 202, 233), rgb(40, 145, 206));
+  margin-top: 1rem;
+  text-align: center;
+  /* font-style: italic; */
+  color: white;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.reset-all {
+  padding: 15px 25px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
+  border-style: none;
+  background: linear-gradient(rgba(147, 202, 233, 0.986), rgb(40, 145, 206));
+  color: white;
+  font-size: 1rem;
+}
+
+.control-button {
+  /*   height: 100%;
+  display: flex; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* background-color: rgba(128, 128, 128, 0.356); */
+}
+
+.control-button button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 200px;
+  padding: 5px 15px;
+  background: linear-gradient(rgb(147, 202, 233), rgb(40, 145, 206));
+  color: white;
+  /* border: 3px solid cyan; */
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 7px;
+
+  border-style: none;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
+
+  /* font-family: "Sansita Swashed", cursive; */
+}
+
+/************* MUHANNAD'S DEL SLUTAR ************/
