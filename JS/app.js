@@ -87,7 +87,7 @@ function checkForMatch() {
     //Flippa tillbaka korten med setTimeout så vi hinner se vad som händer.
     unFlicpCards();
     addMoves(); ////////////////// Add moves function
-    losingPoints(); /////////////// Add losing
+    losingPoints(); /////////////// Add losingPoints funktion
   }
 }
 
