@@ -261,7 +261,7 @@ cards.forEach(
         setTimeout(
           function(){
             stopClock();
-            alert(`Congratulations! 🎉 \nYou Made (${moves}) Moves In (${min} Min :${time} Sec) .. Your Score Is (${score}) Point\nClikck "Ok" To Play Again!`);
+            alert(`Congratulations! 🎉 \nYou Made (${moves}) Moves In (${min} Min : ${time} Sec) .. Your Score Is (${score}) Point\nClikck "Ok" To Play Again!`);
             window.location.reload()
           }, 200
         );
